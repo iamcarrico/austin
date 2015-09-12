@@ -1,0 +1,14 @@
+---
+layout: default
+title: Activities
+css_id: activities
+permalink: /activities/
+---
+
+<h2>Activities</h2>
+
+<ul>
+  {% for activity in site.activities  %}
+    <li><a href="{{ activity.url }}">{{ activity.name }}</a>
+  {% endfor %}
+</ul>

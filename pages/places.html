@@ -1,0 +1,14 @@
+---
+layout: default
+title: Places
+css_id: places
+permalink: /places/
+---
+
+<h2>Places</h2>
+
+<ul>
+  {% for place in site.places  %}
+    <li><a href="{{ place.url }}">{{ place.name }}</a>
+  {% endfor %}
+</ul>

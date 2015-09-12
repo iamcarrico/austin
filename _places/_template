@@ -1,0 +1,8 @@
+---
+layout: place
+name:  "The name of the place"
+address: A full address.
+website: A website, if they have one.
+---
+
+A description. Something brief, preferably.

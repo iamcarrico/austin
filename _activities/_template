@@ -1,0 +1,8 @@
+---
+layout: activity
+name:  "The name of the activity"
+address: A full address.
+website: A website, if they have one.
+---
+
+A description. Something brief, preferably.
