@@ -1,0 +1,19 @@
+////////////////////////
+// Configuration partials
+//
+// These files will be shared across all three of your output CSS files.
+// Generally included here are only imports for variables, functions, mixins,
+// and extendables.
+////////////////////////
+
+
+////////////////////////
+// Private imports
+//
+// Any other imports to add. Normally, these do not include any css, but just
+// functions, variables, etc. to be used by other files.
+//
+@import 'functions';
+@import 'mixins';
+@import 'variables';
+////////////////////////

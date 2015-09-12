@@ -1,0 +1,33 @@
+# Site settings
+title: Things to do in Austin
+
+description: > # A site of things to do in Austin for when people visit for conferences etc.
+baseurl: ""
+url: "http://ineedadomain.com"
+
+collections:
+  restaurants:
+    output: true
+    permalink: /restaurant/:path/
+  activities:
+    output: true
+    permalink: /activty/:path/
+  places:
+    output: true
+    permalink: /places/:path/
+
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - CONTRIBUTING.md
+  - README.md
+  - config.rb
+  - package.json
+  - gulpfile.js
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - lint.yml
