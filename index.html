@@ -2,19 +2,20 @@
 layout: default
 ---
 
-<div class="home">
+<section class="restaurants">
+  {% for restaurant in site.restaurants %}
+    {% include teaser.html stuff=restaurant %}
+  {% endfor %}
+</section>
 
-  <h1 class="page-heading">Posts</h1>
+<section class="places">
+  {% for place in site.places %}
+    {% include teaser.html stuff=place %}
+  {% endfor %}
+</section>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<section class="activities">
+  {% for activity in site.activities %}
+    {% include teaser.html stuff=activity %}
+  {% endfor %}
+</section>
