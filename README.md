@@ -1,5 +1,5 @@
-What to do in Austin
---------------------
+Stuff to do in Austin
+---------------------
 
 A repository of fun things to do in Austin. Viewable at a URL that has yet to be determined.
 

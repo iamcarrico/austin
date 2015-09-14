@@ -149,3 +149,41 @@ gulp.task('watch', function () {
     "!node_modules/**/*"
   ], ['jekyll-rebuild']);
 });
+
+/**
+ * Gulp task to build the site, and have a full site in the _site folder.
+ */
+gulp.task('build', function (cb) {
+  return runSequence(
+    'test',
+    'sass',
+    'jekyll',
+    cb
+  );
+});
+
+
+/**
+ * Gulp task to deploy. This will deploy it. REALLY. Like... deploy deploy.
+ *
+ * @see build gulp task
+ * @see commit gulp task
+ */
+gulp.task('deploy', function (cb) {
+  return runSequence(
+    'build',
+    'commit',
+    cb
+  );
+});
+
+/**
+ * Gulp task to commit the site folder to the gh-pages branch and push.
+ */
+gulp.task('commit', function () {
+  gulp.src("./_site/**/*")
+    .pipe($.ghPages({
+      cacheDir: '.tmp',
+      branch: 'gh-pages'
+    })).pipe(gulp.dest('/tmp/austin.live'));
+});

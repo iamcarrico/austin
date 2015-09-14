@@ -1,9 +1,9 @@
 # Site settings
-title: Things to do in Austin
+title: Stuff to do in Austin
 
 description: > # A site of things to do in Austin for when people visit for conferences etc.
 baseurl: ""
-url: "http://ineedadomain.com"
+url: "http://stuffinaustin.com"
 
 collections:
   restaurants:
