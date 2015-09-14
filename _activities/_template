@@ -3,6 +3,7 @@ layout: activity
 name:  "The name of the activity"
 address: A full address.
 website: A website, if they have one.
+downtown_walkable: yes/no
 ---
 
 A description. Something brief, preferably.
