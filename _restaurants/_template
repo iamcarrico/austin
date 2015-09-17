@@ -6,6 +6,7 @@ website: A website, if they have one.
 downtown_walkable: yes/no
 veggie_option: yes/no
 vegan_option: yes/no
+cost: 1-5
 ---
 
 A description. Something brief, preferably.
