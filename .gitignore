@@ -1,4 +1,10 @@
-_site
-.sass-cache
-css
+# NPM
 node_modules
+
+# Compiled files
+_site
+css
+
+# Cache files
+.tmp
+.sass-cache
