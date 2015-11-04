@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="no-js lte-ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-us"> <!--<![endif]-->
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <main class="l-main" role="main" {% if page.css_id %}id="{{ page.css_id }}"{% endif %}>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

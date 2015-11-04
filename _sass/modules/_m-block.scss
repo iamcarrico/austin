@@ -1,20 +1,56 @@
+// a single entry block on the HP
+
 $m: '.m-block';
+
+$num-blocks: 33;
+
+// TODO:
+// Convert single long gradients into chopped-up bits
+// apply each bit to each %3 == 1 and %3 == 2 (i.e. 1st and 2nd in row) item
+// + use offset :before elements to weave the horizontal gray lines
 
 #{$m} {
   width: 30%;
-
+  position: relative;
   $ordlist: ();
-  @for $i from 1 through 100 {
+  @for $i from 1 through $num-blocks {
     $ordlist: append($ordlist, $i);
   }
   $ordlist: shuffle($ordlist);
-  @for $i from 1 through 100 {
+  @for $i from 1 through $num-blocks {
     &:nth-child(#{$i}) {
-      order: nth($ordlist, $i);
+      $ord: nth($ordlist, $i);
+      order: $ord;
+      @media (min-width: $media-smallish) {
+        @if (($ord % 3) == 1) {
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -10px;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, blue, red);
+          }
+        }
+        @if (($ord % 3) == 2) {
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -10px;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, pink, blue);
+          }
+        }
+      }
     }
   }
 
-  @media (max-width: $media-small) {
+  @media (max-width: $media-smallish) {
     width: 80%;
   }
 }

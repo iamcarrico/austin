@@ -1,0 +1,10 @@
+// a single entry's inner view
+// e.g. the details about one restaurant
+
+$m: '.m-single';
+
+#{$m} {
+  p {
+    font-family: $font-body;
+  }
+}
