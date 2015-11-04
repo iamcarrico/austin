@@ -1,20 +1,13 @@
 ---
 layout: default
 ---
-
-<section class="restaurants">
+<section class="l-home">
   {% for restaurant in site.restaurants %}
     {% include teaser.html stuff=restaurant %}
   {% endfor %}
-</section>
-
-<section class="places">
   {% for place in site.places %}
     {% include teaser.html stuff=place %}
   {% endfor %}
-</section>
-
-<section class="activities">
   {% for activity in site.activities %}
     {% include teaser.html stuff=activity %}
   {% endfor %}

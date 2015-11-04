@@ -1,0 +1,25 @@
+$m: '.m-header';
+
+#{$m} {
+  max-width: 90%;
+  margin: 0 5%;
+  padding-top: 2rem;
+}
+
+#{$m} {
+  h1 {
+    text-transform: initial;
+    font-size: 4rem;
+    line-height: 1;
+    color: $magenta;
+    font-weight: 400;
+    -webkit-margin-after: 0;
+    margin: 1rem 0 0 0;
+
+
+  }
+  h2 {
+    font-family: $font-body;
+    font-size: 1.4rem;
+  }
+}

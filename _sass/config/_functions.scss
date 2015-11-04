@@ -3,3 +3,17 @@
 //
 // All of your global functions should go in this file.
 ////////////////////////
+
+@function shuffle($list) {
+  $list-length: length($list);
+
+  @while($list-length > 0) {
+    $rand: random($list-length);
+    $temp: nth($list, $rand);
+    $list: set-nth($list, $rand, nth($list, $list-length));
+    $list: set-nth($list, $list-length, $temp);
+    $list-length: $list-length - 1;
+  }
+
+  @return $list;
+}

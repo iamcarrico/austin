@@ -141,7 +141,7 @@ gulp.task('test', ['lint']);
  * @see jekyll-rebuild gulp task.
  */
 gulp.task('watch', function () {
-  gulp.watch(settings.sassDir + '/**/*.scss', ['lint-scss', 'sass']);
+  gulp.watch(settings.sassDir + '/**/*.scss', ['sass', 'jekyll-rebuild']);
   gulp.watch([
     "**/*.html",
     "**/*.md",

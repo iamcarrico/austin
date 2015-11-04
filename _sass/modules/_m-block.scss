@@ -1,0 +1,22 @@
+$m: '.m-block';
+
+#{$m} {
+  width: 30%;
+
+  $ordlist: ();
+  @for $i from 1 through 100 {
+    $ordlist: append($ordlist, $i);
+  }
+  $ordlist: shuffle($ordlist);
+  @for $i from 1 through 100 {
+    &:nth-child(#{$i}) {
+      order: nth($ordlist, $i);
+    }
+  }
+}
+
+#{$m}__link {
+  font-family: $font-body;
+  text-transform: initial;
+  text-decoration: none;
+}

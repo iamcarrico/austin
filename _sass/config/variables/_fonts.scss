@@ -30,7 +30,8 @@ $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 
 // Project-specific fonts
 // Put any font families here that are specific to your project.
-
+$esk: "eskapade-fraktur", Georgia, "Times New Roman", "DejaVu Serif", sans-serif;
+$cal: "calluna", Helvetica, Arial, "Nimbus Sans L", serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
@@ -41,3 +42,6 @@ $base-font-family: $helvetica; // The font family set on the html element.
 $font-body:        $helvetica;
 $font-monospace:   $courier;
 $form-font-family: $arial;
+
+$font-head: $esk;
+$font-body: $cal;
