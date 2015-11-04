@@ -13,6 +13,10 @@ $m: '.m-block';
       order: nth($ordlist, $i);
     }
   }
+
+  @media (max-width: $media-small) {
+    width: 80%;
+  }
 }
 
 #{$m}__link {
