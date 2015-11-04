@@ -1,12 +1,12 @@
-$m: '.m-header';
-
-#{$m} {
+.m-header {
   max-width: 90%;
   margin: 0 5%;
   padding-top: 2rem;
-}
 
-#{$m} {
+  &__link {
+    text-decoration: none;
+  }
+
   h1 {
     text-transform: initial;
     font-size: 4rem;

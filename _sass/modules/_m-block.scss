@@ -2,14 +2,14 @@
 
 $m: '.m-block';
 
-$num-blocks: 33;
+$num-blocks: 36;
 
 // TODO:
 // Convert single long gradients into chopped-up bits
 // apply each bit to each %3 == 1 and %3 == 2 (i.e. 1st and 2nd in row) item
 // + use offset :before elements to weave the horizontal gray lines
 
-#{$m} {
+.m-block {
   width: 30%;
   position: relative;
   $ordlist: ();
@@ -53,10 +53,10 @@ $num-blocks: 33;
   @media (max-width: $media-smallish) {
     width: 80%;
   }
-}
 
-#{$m}__link {
-  font-family: $font-body;
-  text-transform: initial;
-  text-decoration: none;
+  &__link {
+    font-family: $font-body;
+    text-transform: initial;
+    text-decoration: none;
+  }
 }
