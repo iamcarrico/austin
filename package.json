@@ -21,6 +21,12 @@
     "email": "github@iancarrico.com",
     "url": "https://github.com/iamcarrico"
   },
+  "contributors": [
+    {
+      "name": "Miriam Nadler",
+      "url": "https://github.com/mknadler"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/iamcarrico/austin/issues"
