@@ -1,6 +1,8 @@
 
 <header class="m-single__header">
-  <h1 class="m-single__name">{{ page.name }}</h1>
+  {% if page.website %}<a href="{{ page.website }}" target="_blank">{% endif %}
+    <h1 class="m-single__name">{{ page.name }}</h1>
+  {% if page.website %}</a>{% endif %}
 </header>
 
 <article class="m-single__content">
@@ -10,6 +12,15 @@
 
   <div class="m-single__metadata">
     <ul>
+      {% if page.website %}<li><a href="{{ page.website }}" target="_blank">{{ page.website }}</a></li>{% endif %}
+      {% if page.cost %}
+
+        <li><span class="m-single__cost">
+          {% for i in (1..5) %}
+            <svg class="icon {% if i <= page.cost %}icon-green{% endif %}" title="Cost dollar"><use xlink:href="/images/icons.svg#dollar-icon"></use></svg>
+          {% endfor %}
+        </span></li>
+      {% endif %}
       {% include yes_no_icon.html item=page.downtown_walkable text="Downtown walkable?" %}
       {% include yes_no_icon.html item=page.veggie_option text="Veggie option?" %}
       {% include yes_no_icon.html item=page.vegan_option text="Vegan option?" %}

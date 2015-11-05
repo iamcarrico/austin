@@ -2,6 +2,16 @@
 // e.g. the details about one restaurant
 
 .m-single {
+  &__header {
+    a {
+      text-decoration: none;
+    }
+
+    > * {
+      display: inline-block;
+    }
+  }
+
   p {
     font-family: $font-body;
   }
@@ -15,6 +25,7 @@
     li {
       padding-bottom: 1em;
       margin-right: 20px;
+      display: inline-block;
     }
 
     svg {
@@ -24,39 +35,16 @@
     }
   }
 
-  &__map {
-    iframe {
-      width: 100%;
+  &__cost {
+    svg {
+      width: 30px;
+      height: 30px;
     }
   }
 
-
-  @media (min-width: 655px) {
-    &__metadata ul {
-      display: flex;
-    }
-
-
-    &__content {
-
-      > div {
-
-      }
-    }
-
-    &__description {
-      clear: right;
-    }
-
-    &__description,
-    &__metadata {
-      //width: 50%;
-      //padding-right: 20px;
-      //float: left;
-    }
-
-    &__map {
-      //width: 100%;
+  &__map {
+    iframe {
+      width: 100%;
     }
   }
 }
