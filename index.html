@@ -5,10 +5,9 @@ layout: default
   {% for restaurant in site.restaurants %}
     {% include teaser.html stuff=restaurant %}
   {% endfor %}
-  {% for place in site.places %}
-    {% include teaser.html stuff=place %}
-  {% endfor %}
   {% for activity in site.activities %}
     {% include teaser.html stuff=activity %}
   {% endfor %}
 </section>
+
+{% include map.html %}
