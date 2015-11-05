@@ -14,8 +14,16 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="canonical" href="http://stuffinaustin.com/restaurant/qui/">
 
-  <script src="https://use.typekit.net/urj3apa.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'urj3apa',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
 
   <link rel="alternate" type="application/rss+xml" title="Stuff to do in Austin" href="http://stuffinaustin.com/feed.xml" />
 </head>
@@ -24,23 +32,67 @@
   <body>
 
     <header class="m-header">
-  <h1>Austin!</h1>
-  <h2>has a lot of stuff to do</h2>
+  <a href="/" class="m-header__link">
+    <h1>Austin!</h1>
+    <h2>has a lot of stuff to do</h2>
+  </a>
 </header>
 
 
-    <main role="main" >
-      <div class="restaurant">
+    <main class="l-main" role="main" >
+      <div class="restaurant m-single">
+  
+<header class="m-single__header">
+  <h1 class="m-single__name">qui</h1>
+</header>
 
-  <header class="restaurant-header">
-    <h1 class="restaurant-name">qui</h1>
-
-  </header>
-
-  <article class="restaurant-content">
+<article class="m-single__content">
+  <div class="m-single__description">
     <p>Make sure to get reservations if you want to go to Paul Qui’s signature restaurant. Enjoy the custom prix fixe menu for a delightful dance on your palate.</p>
 
-  </article>
+  </div>
+
+  <div class="m-single__metadata">
+    <ul>
+      
+  <li>
+    
+      <svg class="icon icon-green" title="Yes, it is"><use xlink:href="/images/icons.svg#check-mark-icon"></use></svg>
+    
+      Downtown walkable?
+  </li>
+
+
+      
+  <li>
+    
+      <svg class="icon icon-red" title="Not, it is not"><use xlink:href="/images/icons.svg#ex-mark-icon"></use></svg>
+    
+      Veggie option?
+  </li>
+
+
+      
+  <li>
+    
+      <svg class="icon icon-red" title="Not, it is not"><use xlink:href="/images/icons.svg#ex-mark-icon"></use></svg>
+    
+      Vegan option?
+  </li>
+
+
+      
+
+    </ul>
+  </div>
+
+  <div class="m-single__map">
+    <h2>Map</h2>
+    <iframe class="maps-frame" width="600" height="450" frameborder="0" style="border:0" allowfullscreen
+              src="https://www.google.com/maps/embed/v1/place?q=qui+1600+E+6th+St%2C+Austin%2C+TX+78702&zoom=17&key=AIzaSyAXkd_kvhbWiRU8J7-UZO44kcbEBrVUOT0">
+    </iframe>
+  </div>
+</article>
 
 </div>
 

@@ -14,8 +14,16 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="canonical" href="http://stuffinaustin.com/restaurants/">
 
-  <script src="https://use.typekit.net/urj3apa.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'urj3apa',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
 
   <link rel="alternate" type="application/rss+xml" title="Stuff to do in Austin" href="http://stuffinaustin.com/feed.xml" />
 </head>
@@ -24,8 +32,10 @@
   <body>
 
     <header class="m-header">
-  <h1>Austin!</h1>
-  <h2>has a lot of stuff to do</h2>
+  <a href="/" class="m-header__link">
+    <h1>Austin!</h1>
+    <h2>has a lot of stuff to do</h2>
+  </a>
 </header>
 
 
