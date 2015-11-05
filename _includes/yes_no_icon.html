@@ -1,0 +1,10 @@
+{% if include.item != null %}
+  <li>
+    {% if include.item %}
+      <svg class="icon icon-green" title="Yes, it is"><use xlink:href="/images/icons.svg#check-mark-icon"></use></svg>
+    {% else %}
+      <svg class="icon icon-red" title="Not, it is not"><use xlink:href="/images/icons.svg#ex-mark-icon"></use></svg>
+    {% endif %}
+      {{ include.text }}
+  </li>
+{% endif %}

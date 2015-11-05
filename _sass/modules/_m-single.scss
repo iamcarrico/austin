@@ -5,4 +5,22 @@
   p {
     font-family: $font-body;
   }
+
+  &__metadata {
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      padding-bottom: 1em;
+    }
+
+    svg {
+      width: 50px;
+      height: 50px;
+      vertical-align: middle;
+    }
+
+  }
 }

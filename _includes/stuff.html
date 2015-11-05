@@ -1,0 +1,26 @@
+
+<header class="m-single__header">
+  <h1 class="m-single__name">{{ page.name }}</h1>
+</header>
+
+<article class="m-single__content">
+  <div class="m-single__description">
+    {{ content }}
+  </div>
+
+  <div class="m-single__metadata">
+    <h2>Is it...?</h2>
+    <ul>
+      {% include yes_no_icon.html item=page.downtown_walkable text="Downtown walkable?" %}
+      {% include yes_no_icon.html item=page.veggie_option text="Veggie option?" %}
+      {% include yes_no_icon.html item=page.vegan_option text="Vegan option?" %}
+    </ul>
+  </div>
+
+  <div class="m-single__map">
+    <h2>Map</h2>
+    <iframe class="maps-frame" width="600" height="450" frameborder="0" style="border:0" allowfullscreen
+              src="https://www.google.com/maps/embed/v1/place?q={{page.name | cgi_escape}}+{{ page.address | cgi_escape }}&zoom=17&key={{site.google_maps_api}}">
+    </iframe>
+  </div>
+</article>

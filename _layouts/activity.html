@@ -2,16 +2,5 @@
 layout: inner
 ---
 <div class="activity m-single">
-
-  <header class="activity-header">
-    <h1 class="activity-name">{{ page.name }}</h1>
-
-  </header>
-
-  <article class="activity-content">
-    {{ content }}
-
-    {% include map.html stuff=page %}
-  </article>
-
+  {% include stuff.html %}
 </div>
