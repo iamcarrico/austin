@@ -3,3 +3,94 @@
 //
 // All of your global mixins should go in this file.
 ////////////////////////
+
+@mixin lgrad($list) {
+  $cols: ();
+  @for $i from 1 through length($list) + 1{
+    $cols: append($cols, mix($blue, $purpred, 100%/(length($list)+1) * $i));
+  }
+  @for $i from 1 through length($list) {
+    &:nth-child(#{nth($list, $i)}) {
+      &:after {
+        background: linear-gradient(to bottom, nth($cols, $i), nth($cols, $i + 1));
+      }
+    }
+  }
+}
+
+@mixin rgrad($list) {
+  $cols: ();
+  @for $i from 1 through length($list) + 1{
+    $cols: append($cols, mix($purpred, $blue, 100%/(length($list)+1) * $i));
+  }
+  @for $i from 1 through length($list) {
+    &:nth-child(#{nth($list, $i)}) {
+      &:after {
+        background: linear-gradient(to bottom, nth($cols, $i), nth($cols, $i + 1));
+      }
+    }
+  }
+}
+
+@mixin bottom-under {
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: -8%;
+    height: 3px;
+    width: 114.5%;
+    background: #DDD;
+  }
+}
+@mixin bottom-over {
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: -8%;
+    height: 3px;
+    width: 120%;
+    background: #DDD;
+  }
+}
+@mixin right-over {
+    &:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: -8%;
+    height: 100%;
+    width: 3px;
+    background: blue;
+  }
+}
+@mixin right-under {
+    &:after {
+    content: '';
+    position: absolute;
+    top: -8%;
+    right: -8%;
+    height: 107%;
+    width: 3px;
+    background: red;
+  }
+}
+
+@mixin a() {
+  @include right-over();
+  @include bottom-under();
+}
+
+@mixin b(){
+  @include right-under();
+  @include bottom-over();
+}
+
+@mixin c(){
+  @include bottom-over();
+}
+
+@mixin d(){
+  @include bottom-under();
+}

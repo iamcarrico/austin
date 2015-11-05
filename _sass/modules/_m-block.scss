@@ -12,43 +12,52 @@ $num-blocks: 36;
 .m-block {
   width: 30%;
   position: relative;
+
   $ordlist: ();
   @for $i from 1 through $num-blocks {
     $ordlist: append($ordlist, $i);
   }
   $ordlist: shuffle($ordlist);
+
+  $lgrad: ();
+  $rgrad: ();
+
   @for $i from 1 through $num-blocks {
     &:nth-child(#{$i}) {
       $ord: nth($ordlist, $i);
       order: $ord;
-      @media (min-width: $media-smallish) {
-        @if (($ord % 3) == 1) {
-          &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            right: -10px;
-            top: 0;
-            width: 3px;
-            height: 100%;
-            background: linear-gradient(to bottom, blue, red);
-          }
-        }
-        @if (($ord % 3) == 2) {
-          &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            right: -10px;
-            top: 0;
-            width: 3px;
-            height: 100%;
-            background: linear-gradient(to bottom, pink, blue);
-          }
-        }
-      }
     }
   }
+
+  @for $i from 1 through $num-blocks {
+    $which: '';
+    $mod: $i % 6;
+    // reverse the shuffled list
+    $nth: index($ordlist, $i);
+
+    &:nth-child(#{$nth}) {
+      @if $mod == 1 or $mod == 5 {
+        @include a();
+      }
+      @if $mod == 2 or $mod == 4 {
+        @include b();
+      }
+      @if $mod == 3 {
+        @include c();
+      }
+      @if $mod == 0 {
+        @include d();
+      }
+    }
+    @if $mod == 1 or $mod == 4 {
+      $lgrad: append($lgrad, $nth);
+    }
+    @if $mod == 2 or $mod == 5 {
+      $rgrad: append($rgrad, $nth);
+    }
+  }
+  @include lgrad($lgrad);
+  @include rgrad($rgrad);
 
   @media (max-width: $media-smallish) {
     width: 80%;
