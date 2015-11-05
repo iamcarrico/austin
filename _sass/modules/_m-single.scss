@@ -14,6 +14,7 @@
 
     li {
       padding-bottom: 1em;
+      margin-right: 20px;
     }
 
     svg {
@@ -21,6 +22,41 @@
       height: 50px;
       vertical-align: middle;
     }
+  }
 
+  &__map {
+    iframe {
+      width: 100%;
+    }
+  }
+
+
+  @media (min-width: 655px) {
+    &__metadata ul {
+      display: flex;
+    }
+
+
+    &__content {
+
+      > div {
+
+      }
+    }
+
+    &__description {
+      clear: right;
+    }
+
+    &__description,
+    &__metadata {
+      //width: 50%;
+      //padding-right: 20px;
+      //float: left;
+    }
+
+    &__map {
+      //width: 100%;
+    }
   }
 }
