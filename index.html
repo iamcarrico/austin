@@ -25,10 +25,6 @@
     })(document);
   </script>
 
-  <script>
-    var googleMapsPlaces = [];
-  </script>
-
   <link rel="alternate" type="application/rss+xml" title="Stuff to do in Austin" href="http://stuffinaustin.com/feed.xml" />
 </head>
 
@@ -422,6 +418,7 @@
 
   
   
+  
     <article class="m-block">
   <h3 class="m-block__verb">
   </h3>
@@ -598,30 +595,6 @@
 
   
 </section>
-
-
-<div id="map"></div>
-
-
-<script>
-  function initMap() {
-    var myLatLng = {lat: -30.2500, lng: 97.7500};
-
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: myLatLng
-    });
-
-    var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'Hello World!'
-    });
-  }
-</script>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXkd_kvhbWiRU8J7-UZO44kcbEBrVUOT0&signed_in=true&callback=initMap"></script>
-
 
     </main>
 
