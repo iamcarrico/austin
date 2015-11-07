@@ -10,9 +10,11 @@
     $cols: append($cols, mix($blue, $purpred, 100%/(length($list)+1) * $i));
   }
   @for $i from 1 through length($list) {
-    &:nth-child(#{nth($list, $i)}) {
-      &:after {
-        background: linear-gradient(to bottom, nth($cols, $i), nth($cols, $i + 1));
+    @media (min-width: $media-smallish) {
+      &:nth-child(#{nth($list, $i)}) {
+        &:after {
+          background: linear-gradient(to bottom, nth($cols, $i), nth($cols, $i + 1));
+        }
       }
     }
   }
@@ -24,9 +26,11 @@
     $cols: append($cols, mix($purpred, $blue, 100%/(length($list)+1) * $i));
   }
   @for $i from 1 through length($list) {
-    &:nth-child(#{nth($list, $i)}) {
-      &:after {
-        background: linear-gradient(to bottom, nth($cols, $i), nth($cols, $i + 1));
+    @media (min-width: $media-smallish) {
+      &:nth-child(#{nth($list, $i)}) {
+        &:after {
+          background: linear-gradient(to bottom, nth($cols, $i), nth($cols, $i + 1));
+        }
       }
     }
   }
@@ -55,25 +59,29 @@
   }
 }
 @mixin right-over {
+  @media (min-width: $media-smallish) {
     &:after {
-    content: '';
-    position: absolute;
-    top: 4px;
-    right: -8%;
-    height: 100%;
-    width: 3px;
-    background: blue;
+      content: '';
+      position: absolute;
+      top: 4px;
+      right: -8%;
+      height: 100%;
+      width: 3px;
+      background: blue;
+    }
   }
 }
 @mixin right-under {
+  @media (min-width: $media-smallish) {
     &:after {
-    content: '';
-    position: absolute;
-    top: -8%;
-    right: -8%;
-    height: 107%;
-    width: 3px;
-    background: red;
+      content: '';
+      position: absolute;
+      top: -8%;
+      right: -8%;
+      height: 107%;
+      width: 3px;
+      background: red;
+    }
   }
 }
 
