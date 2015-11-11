@@ -33,3 +33,9 @@ $selection-bg   : #66B360;
 $selection      : $white;
 
 $magenta: #FF0066;
+$purpred: #E93B7E;
+$blue: #4F60FD;
+
+@function gradient($direction) {
+  @return linear-gradient($direction, $purpred, $blue);
+}

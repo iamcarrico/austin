@@ -7,6 +7,7 @@ downtown_walkable: yes
 veggie_option: no
 vegan_option: no
 cost: 1
+verb: drink at
 ---
 
 One of the East Side's many dive bars. Come in, grab a beer, hang out in their large backyard.

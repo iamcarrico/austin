@@ -7,6 +7,7 @@ downtown_walkable: yes
 veggie_option: yes
 vegan_option: yes
 cost: 1
+verb: drink at
 ---
 
 Give me Liberty... or give me East Side King— both can be found at this Austin dive bar staple.

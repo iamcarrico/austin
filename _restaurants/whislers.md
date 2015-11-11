@@ -7,6 +7,7 @@ downtown_walkable: yes
 veggie_option: yes
 vegan_option: yes
 cost: 3
+verb: drink at
 ---
 
 Craft cocktail bar in East Austin— known for the East Side King trailer out back and the Mezal bar open Friday and Saturday nights above.
