@@ -93,15 +93,15 @@
   @include bottom-under();
 }
 
-@mixin b(){
+@mixin b() {
   @include right-under();
   @include bottom-over();
 }
 
-@mixin c(){
+@mixin c() {
   @include bottom-over();
 }
 
-@mixin d(){
+@mixin d() {
   @include bottom-under();
 }

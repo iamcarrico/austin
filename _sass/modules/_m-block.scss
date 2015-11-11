@@ -47,6 +47,7 @@ $num-blocks: 45;
         @include d();
       }
     }
+
     @if $mod == 1 or $mod == 4 {
       $lgrad: append($lgrad, $nth);
     }
@@ -54,8 +55,11 @@ $num-blocks: 45;
       $rgrad: append($rgrad, $nth);
     }
   }
+
+  // scss-lint:disable DeclarationOrder
   @include lgrad($lgrad);
   @include rgrad($rgrad);
+  // scss-lint:enable DeclarationOrder
 
   @media (max-width: $media-smallish) {
     width: 80%;
