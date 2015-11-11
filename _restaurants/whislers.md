@@ -8,6 +8,8 @@ veggie_option: yes
 vegan_option: yes
 cost: 3
 verb: drink at
+lat: 30.261993
+lng: -97.7226943
 ---
 
 Craft cocktail bar in East Austin— known for the East Side King trailer out back and the Mezal bar open Friday and Saturday nights above.

@@ -5,27 +5,88 @@
 <script>
   function initMap() {
     var geocoder = new google.maps.Geocoder();
-    var ndAddress = "The North Door, 501 Brushy St, Austin, TX 78702"
+    var infowindow = new google.maps.InfoWindow();
 
-    geocoder.geocode( { 'address': ndAddress}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        var ndLatLong = results[0].geometry.location
+    var ndLatLong = {
+      lat: 30.2648708,
+      lng: -97.73396439999999
+    }
 
+    var map = new google.maps.Map(document.getElementById('m-map'), {
+      zoom: 14,
+      center: ndLatLong
+    });
 
-        var map = new google.maps.Map(document.getElementById('m-map'), {
-          zoom: 14,
-          center: ndLatLong
-        });
+    var marker = new google.maps.Marker({
+      position: ndLatLong,
+      map: map,
+      title: 'The North Door',
+      icon: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent("The North Door");
+      infowindow.open(map, this);
+    });
+
+    var brewAndBrewLatLong = {
+      lat: 30.264559,
+      lng: -97.73310400000003
+    }
+
+    var bnbMarker = new google.maps.Marker({
+      position: brewAndBrewLatLong,
+      map: map,
+      title: 'Brew and Brew',
+      icon: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+    });
+
+    google.maps.event.addListener(bnbMarker, 'click', function() {
+      infowindow.setContent("Brew and Brew");
+      infowindow.open(map, this);
+    });
+
+    googleMapsPlaces.forEach(function(e, i) {
+
+      // If we have a lat-lng, we will add it to the MAP!.
+      if (e.lat !== "") {
+        var latLong = {
+          lat: Number(e.lat),
+          lng: Number(e.lng)
+        };
+        var icon = e.type == "restaurant" ? "http://maps.google.com/mapfiles/ms/icons/green-dot.png" : "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
 
         var marker = new google.maps.Marker({
-          position: ndLatLong,
+          position: latLong,
           map: map,
-          title: 'The North Door',
-          icon: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+          title: e.name,
+          icon: icon
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.close();
+
+          var content = "<a href=\"" + e.url + "\">" + e.name + "</a><br>" +
+                        e.address + "<br>" +
+                        "<a href=\"" + e.website + "\">" + e.website + "</a>";
+
+          infowindow.setContent(content);
+          infowindow.open(map, this);
+        });
+      }
+      else {
+        // We do not have the lat-long, find it, put it into the console. We
+        // need to add these to the markup so that we dont pull the API every
+        // time.
+        geocoder.geocode( { 'address': e.address}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            console.log(e.name);
+            console.log("lat: " + results[0].geometry.location.lat() + "\nlng: " + results[0].geometry.location.lng());
+            console.log();
+          }
         });
       }
     });
-
   }
 </script>
 

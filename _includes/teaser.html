@@ -16,4 +16,16 @@
       {{ include.stuff.name }}
     </a>
   </h2>
+
+  <script>
+    googleMapsPlaces.push({
+      name: "{{ include.stuff.name }}",
+      address: "{{ include.stuff.address }}",
+      website: "{{ include.stuff.website }}",
+      url: "{{ include.stuff.url }}",
+      type: "{{ include.stuff.layout }}",
+      lat: "{{ include.stuff.lat }}",
+      lng: "{{ include.stuff.lng }}"
+    })
+  </script>
 </article>

@@ -8,6 +8,8 @@ veggie_option: no
 vegan_option: no
 cost: 2
 verb: drink at
+lat: 30.264239
+lng: -97.730796
 ---
 
 Grab a beer, a pizza from Via 313, and hang out at the back patio of this east Austin bar.

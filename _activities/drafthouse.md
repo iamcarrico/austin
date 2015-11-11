@@ -4,6 +4,8 @@ name:  "Alamo Drafthouse Ritz"
 address: 320 E 6th St, Austin, TX 78701
 website: http://drafthouse.com/austin/the_ritz
 downtown_walkable: yes
+lat: 30.2673341
+lng: -97.73962
 ---
 
 The best way to watch a movie in Austin. Sit back with some awesome food, a drink of your choosing— and enjoy the silver screen as it was meant to be seen.

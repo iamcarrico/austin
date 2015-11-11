@@ -7,6 +7,8 @@ downtown_walkable: no
 veggie_option: no
 vegan_option: no
 cost: 2
+lat: 30.26952249999999
+lng: -97.71920449999999
 ---
 
 Gumbo, burgers, po-boy, fried chicken, and every other soul food you can imagine. Friday night is all-you-can eat gumbo night.

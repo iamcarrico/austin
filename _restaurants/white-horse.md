@@ -8,6 +8,8 @@ veggie_option: no
 vegan_option: no
 cost: 2
 verb: drink at
+lat: 30.2625339
+lng: -97.7270355
 ---
 
 I think only this video can accurately describe all that is the White Horse.

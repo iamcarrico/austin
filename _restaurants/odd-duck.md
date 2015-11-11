@@ -7,6 +7,8 @@ downtown_walkable: no
 veggie_option: yes
 vegan_option: no
 cost: 5
+lat: 30.2546299
+lng: -97.762
 ---
 
 A food truck turned brick-and-motar, Odd Duck supports local farms with their unique dishes sure to please any pallet. Come taste some of the best of Austin's foodie scene.

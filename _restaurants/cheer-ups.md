@@ -8,6 +8,8 @@ veggie_option: no
 vegan_option: no
 cost: 2
 verb: drink at
+lat: 30.26960979999999
+lng: -97.7363583
 ---
 
 The quintessential queer bar in Austin. Hang out under the parachute, grab a lone star, and listen to some live music.
