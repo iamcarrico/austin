@@ -3,13 +3,15 @@
   </h3>
   <h2 class="m-block__title">
     <a class="m-block__link" href="{{ include.stuff.url }}">
-      {% if include.stuff.layout == 'activity' %}
+      {% if include.stuff.verb %}
+        {{ include.stuff.verb }}
+      {% elsif include.stuff.layout == 'activity' %}
         visit
       {% elsif include.stuff.layout == 'restaurant' %}
         eat at
       {% endif %}
       {% if include.stuff.prefix %}
-      {{include.stuff.prefix}}
+        {{include.stuff.prefix}}
       {% endif %}
       {{ include.stuff.name }}
     </a>
