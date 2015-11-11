@@ -6,7 +6,7 @@
 
 @mixin lgrad($list) {
   $cols: ();
-  @for $i from 1 through length($list) + 1{
+  @for $i from 1 through length($list) + 1 {
     $cols: append($cols, mix($blue, $purpred, 100%/(length($list)+1) * $i));
   }
   @for $i from 1 through length($list) {
@@ -22,7 +22,7 @@
 
 @mixin rgrad($list) {
   $cols: ();
-  @for $i from 1 through length($list) + 1{
+  @for $i from 1 through length($list) + 1 {
     $cols: append($cols, mix($purpred, $blue, 100%/(length($list)+1) * $i));
   }
   @for $i from 1 through length($list) {
@@ -47,6 +47,7 @@
     background: #DDD;
   }
 }
+
 @mixin bottom-over {
   &:before {
     content: '';
@@ -58,6 +59,7 @@
     background: #DDD;
   }
 }
+
 @mixin right-over {
   @media (min-width: $media-smallish) {
     &:after {
@@ -71,6 +73,7 @@
     }
   }
 }
+
 @mixin right-under {
   @media (min-width: $media-smallish) {
     &:after {
