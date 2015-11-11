@@ -8,8 +8,8 @@ veggie_option: yes
 vegan_option: yes
 cost: 1
 verb: drink at
-lat: 30.266064
-lng: -97.72479090000002
+lat: 30.262698
+lng: -97.725101
 ---
 
 Give me Liberty... or give me East Side King— both can be found at this Austin dive bar staple.

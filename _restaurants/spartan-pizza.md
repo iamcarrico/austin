@@ -7,6 +7,8 @@ downtown_walkable: yes
 veggie_option: yes
 vegan_option: no
 cost: 2
+lat: 30.264944
+lng: -97.73208799999998
 ---
 
 Eat the pizza of the (Greek) gods, and be a true Spartan Hero.
