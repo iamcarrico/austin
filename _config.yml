@@ -4,6 +4,7 @@ title: Stuff to do in Austin
 description: > # A site of things to do in Austin for when people visit for conferences etc.
 baseurl: ""
 url: "http://stuffinaustin.com"
+development: false
 
 google_maps_api: "AIzaSyAXkd_kvhbWiRU8J7-UZO44kcbEBrVUOT0"
 
