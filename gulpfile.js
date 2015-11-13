@@ -10,6 +10,11 @@ var cp = require('child_process');
 var runSequence = require('run-sequence').use(gulp);
 var stylish = require('jshint-stylish');
 
+
+var Eyeglass = require("eyeglass").Eyeglass;
+var sassOptions = {};
+var eyeglass = new Eyeglass(sassOptions);
+
 // Some settings vars we will put at the top, so we don't have to sift through
 // all of this to change directory names.
 var settings = {
@@ -26,7 +31,7 @@ gulp.task('default', $.taskListing);
  */
 gulp.task('sass', function() {
   gulp.src(settings.sassDir + '/**/*.scss')
-    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.sass(eyeglass.sassOptions()).on("error", $.sass.logError))
     .pipe($.autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
