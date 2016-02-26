@@ -3,8 +3,12 @@ node_modules
 
 # Compiled files
 _site
+_public
 css
+js
 
 # Cache files
 .tmp
 .sass-cache
+.eyeglass_cache
+.jekyll-assets-cache

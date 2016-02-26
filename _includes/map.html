@@ -7,6 +7,7 @@
     var geocoder = new google.maps.Geocoder();
     var infowindow = new google.maps.InfoWindow();
 
+    // This is for the North Door.
     var ndLatLong = {
       lat: 30.2648708,
       lng: -97.73396439999999
@@ -15,35 +16,6 @@
     var map = new google.maps.Map(document.getElementById('m-map'), {
       zoom: 14,
       center: ndLatLong
-    });
-
-    var marker = new google.maps.Marker({
-      position: ndLatLong,
-      map: map,
-      title: 'The North Door',
-      icon: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.setContent("The North Door");
-      infowindow.open(map, this);
-    });
-
-    var brewAndBrewLatLong = {
-      lat: 30.264559,
-      lng: -97.73310400000003
-    }
-
-    var bnbMarker = new google.maps.Marker({
-      position: brewAndBrewLatLong,
-      map: map,
-      title: 'Brew and Brew',
-      icon: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
-    });
-
-    google.maps.event.addListener(bnbMarker, 'click', function() {
-      infowindow.setContent("Brew and Brew");
-      infowindow.open(map, this);
     });
 
     googleMapsPlaces.forEach(function(e, i) {
